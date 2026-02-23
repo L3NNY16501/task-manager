@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from tables import Task
+from models import Task
 from schemas import TaskCreate, TaskUpdate
 
 

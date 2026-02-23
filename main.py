@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from database import engine
-import tables
+import models
 from routers import tasks
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -9,7 +9,7 @@ app = FastAPI(title="Task Manager API")
 
 
 # Create tables in Database
-tables.Base.metadata.create_all(bind=engine)
+models.Base.metadata.create_all(bind=engine)
 
 
 # Add CORS Middleware (for frontend interaction)
